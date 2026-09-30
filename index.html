@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đá Gắn Răng Cubic Zirconia | Thẻ 5 viên tròn trắng</title>
+    <meta
+      name="description"
+      content="Demo landing page đá gắn răng Cubic Zirconia tròn trắng, đế bằng, thẻ niêm phong 5 viên, có công cụ chọn size và đăng ký mua sỉ."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Đá Gắn Răng Cubic Zirconia" />
+    <meta property="og:description" content="Tròn trắng, đế bằng, thẻ niêm phong 5 viên. Dữ liệu demo chờ shop xác nhận." />
+    <meta property="og:image" content="assets/img/og-cover.svg" />
+    <!-- TODO: og:image cần PNG/JPG 1200x630 khi chạy thật (Facebook/Zalo không hiển thị SVG) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0B1F4B" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap&subset=vietnamese"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="application/ld+json" id="schema-json"></script>
+    <!-- TODO: Facebook Pixel -->
+    <!-- TODO: GA4 -->
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Bỏ qua menu</a>
+    <header class="site-header">
+      <a class="brand" href="#hero" aria-label="Đá Gắn Răng - về đầu trang">
+        <img class="brand-mark" src="assets/logo-mark.svg" alt="" width="40" height="40" />
+        <span class="brand-text">
+          <span class="brand-name" data-render="shop-name">Đá Gắn Răng</span>
+          <small>Cubic Zirconia</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Mở menu</span>
+        <span aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Điều hướng chính">
+        <a href="#products">Sản phẩm</a>
+        <a href="#size-guide">Chọn size</a>
+        <a href="#wholesale">Mua sỉ</a>
+        <a href="#faq">Hỏi đáp</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+      <a class="header-cta" href="#" data-contact="zalo" data-track="header_zalo">Nhắn Zalo</a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="hero">
+        <div class="section-shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Cubic Zirconia (kim cương nhân tạo)</p>
+            <h1 data-render="hero-title">Đá gắn răng Cubic Zirconia - lấp lánh như kim cương</h1>
+            <p data-render="hero-description">
+              Cắt tròn trắng trong, đế bằng, đóng thẻ niêm phong 5 viên. Nhắn shop để chọn đúng size.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#" data-contact="zalo" data-track="hero_zalo">Nhắn Zalo</a>
+              <a class="btn btn-light" href="#products">Xem các size</a>
+            </div>
+            <div class="badge-row" data-render="badges"></div>
+          </div>
+          <div data-render="hero-card"></div>
+        </div>
+      </section>
+
+      <section class="section-shell" aria-labelledby="why-title">
+        <div class="section-heading">
+          <p class="eyebrow">Vì sao chọn</p>
+          <h2 id="why-title">Rõ thông số, dễ tư vấn, hợp bán lẻ và mua sỉ</h2>
+        </div>
+        <div class="benefit-grid" data-render="benefits"></div>
+      </section>
+
+      <section class="section-shell showcase" aria-labelledby="showcase-title">
+        <div class="section-heading">
+          <p class="eyebrow" data-render="showcase-eyebrow">Nụ cười lấp lánh</p>
+          <h2 id="showcase-title" data-render="showcase-title"></h2>
+          <p data-render="showcase-text"></p>
+        </div>
+        <div class="showcase-grid" data-render="showcase"></div>
+      </section>
+
+      <section class="section-shell" id="products" aria-labelledby="products-title">
+        <div class="section-heading">
+          <p class="eyebrow">Sản phẩm - các size</p>
+          <h2 id="products-title">Một kiểu tròn trắng, bốn size trên thẻ 5 viên</h2>
+        </div>
+        <div class="product-grid" data-render="products"></div>
+      </section>
+
+      <section class="section-shell shape-section" id="shapes" aria-labelledby="shape-title">
+        <h2 class="sr-only" id="shape-title">Chọn kiểu đá</h2>
+        <div class="shape-layout">
+          <div class="shape-stage" aria-live="polite">
+            <img src="assets/img/shapes/round.png" alt="Ảnh viên đá kiểu Tròn" data-shape-stage />
+          </div>
+          <div class="shape-panel">
+            <h3 class="shape-name"><span data-shape-title></span> <em class="shape-badge" data-shape-badge></em></h3>
+            <div class="shape-row">
+              <span class="shape-label" id="shape-label">Kiểu đá:</span>
+              <div class="shape-icons" role="radiogroup" aria-labelledby="shape-label" data-render="shape-icons"></div>
+            </div>
+            <p data-shape-desc></p>
+            <div class="shape-size-row">
+              <label class="shape-select"><span>Chọn size</span>
+                <select data-shape-size></select>
+              </label>
+              <a class="shape-guide" href="#size-guide">Hướng dẫn chọn size</a>
+            </div>
+            <a class="btn shape-cta" href="#" data-shape-cta data-track="shape_zalo">Hỏi kiểu đá này qua Zalo</a>
+            <p class="tool-note" data-render="shapes-note"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell size-guide" id="size-guide" aria-labelledby="size-title">
+        <div class="section-heading">
+          <p class="eyebrow">Chọn size</p>
+          <h2 id="size-title">Thử size ngay trên răng</h2>
+        </div>
+        <div class="tool-layout">
+          <form class="size-tool" data-size-tool>
+            <fieldset>
+              <legend>Loại răng</legend>
+              <div class="segmented" data-render="tooth-options"></div>
+            </fieldset>
+            <fieldset>
+              <legend>Mong muốn</legend>
+              <div class="segmented" data-render="style-options"></div>
+            </fieldset>
+            <label class="slider-label" for="size-slider">
+              Kéo để xem từng size
+              <strong><span data-size-current>2.50</span> mm</strong>
+            </label>
+            <input id="size-slider" type="range" min="0" max="3" value="1" step="1" data-size-slider />
+            <div class="slider-ticks" data-render="ticks"></div>
+            <p class="size-reason" data-size-reason role="status"></p>
+            <div class="upload-box">
+              <label class="btn btn-secondary upload-btn">Thử trên ảnh của bạn
+                <input type="file" accept="image/*" hidden data-upload />
+              </label>
+              <button class="btn btn-ghost" type="button" hidden data-upload-reset>Dùng ảnh mẫu</button>
+              <label class="scale-box" hidden data-scale-box>Tỷ lệ theo ảnh của bạn
+                <input type="range" min="0.4" max="3" step="0.05" value="1" data-scale />
+              </label>
+              <p class="tool-note" data-render="privacy-note"></p>
+            </div>
+            <p class="tool-note" data-render="size-note"></p>
+          </form>
+          <div class="tooth-preview">
+            <div class="smile-stage" data-smile-stage>
+              <img class="smile-photo" src="assets/img/teeth-model.jpg" alt="Ảnh mẫu hàng răng cười" data-smile-photo />
+              <img class="smile-gem" src="assets/img/shapes/round.png" alt="Viên đá, kéo để di chuyển" tabindex="0" draggable="false" data-size-gem />
+            </div>
+            <div class="compare-strip" data-render="compare" aria-label="So sánh 4 size theo tỷ lệ"></div>
+            <p class="preview-result">Đang xem: <strong data-size-result>2.50 mm</strong></p>
+            <a class="btn btn-primary" href="#" data-size-cta data-track="size_zalo">Nhắn Zalo hỏi size này</a>
+            <p class="tool-note" data-render="scale-note"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell" aria-labelledby="read-title">
+        <div class="section-heading">
+          <p class="eyebrow">Đọc thẻ thông số</p>
+          <h2 id="read-title">Hiểu nhanh Measure, Weight, Clarity, Color và mã thẻ</h2>
+        </div>
+        <div class="read-layout">
+          <div data-render="spec-card"></div>
+          <div class="callout-list" data-render="read-card"></div>
+        </div>
+      </section>
+
+      <section class="section-shell process" id="process" aria-labelledby="process-title">
+        <div class="section-heading">
+          <p class="eyebrow">Cách gắn</p>
+          <h2 id="process-title">Quy trình gắn đá 5 bước</h2>
+          <p data-render="process-time"></p>
+        </div>
+        <div class="notice" role="note" data-render="process-warning"></div>
+        <div class="process-layout">
+          <figure class="process-photo" data-render="process-photo"></figure>
+          <ol class="steps" data-render="process"></ol>
+        </div>
+        <div class="aftercare">
+          <h3 data-render="aftercare-title"></h3>
+          <ul data-render="aftercare"></ul>
+          <a class="btn btn-primary" href="#" data-contact="zalo" data-track="process_zalo">Nhắn Zalo hỏi tư vấn</a>
+        </div>
+      </section>
+
+      <section class="section-shell wholesale" id="wholesale" aria-labelledby="wholesale-title">
+        <div class="section-heading">
+          <p class="eyebrow">Mua sỉ / đại lý</p>
+          <h2 id="wholesale-title">Dành cho nha khoa, spa, thẩm mỹ viện và thợ gắn</h2>
+        </div>
+        <div class="wholesale-layout">
+          <div class="tier-grid" data-render="tiers"></div>
+          <form class="dealer-form" data-dealer-form>
+            <label>Tên của bạn <input name="name" autocomplete="name" required /></label>
+            <label>Số điện thoại <input name="phone" inputmode="tel" autocomplete="tel" required /></label>
+            <label>Đơn vị <input name="company" autocomplete="organization" required /></label>
+            <label>Số lượng dự kiến <input name="quantity" inputmode="numeric" required /></label>
+            <button class="btn btn-primary" type="submit" data-track="dealer_submit">Đăng ký mua sỉ</button>
+            <p class="form-message" data-form-message role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-shell" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <p class="eyebrow">Hỏi đáp</p>
+          <h2 id="faq-title">Câu hỏi thường gặp</h2>
+        </div>
+        <div class="faq-list" data-render="faq"></div>
+      </section>
+
+      <section class="section-shell" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="eyebrow">Liên hệ</p>
+          <h2 id="contact-title">Nhắn shop để nhận báo giá và tư vấn size</h2>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-panel">
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="#" data-contact="zalo" data-track="contact_zalo">Zalo</a>
+              <a class="btn btn-secondary" href="#" data-contact="messenger" data-track="contact_messenger">Messenger</a>
+              <a class="btn btn-ghost" href="#" data-contact="phone" data-track="contact_phone">Gọi điện</a>
+            </div>
+            <dl class="contact-list" data-render="contact"></dl>
+          </div>
+          <div class="map-placeholder" role="img" aria-label="Khung bản đồ placeholder">
+            <span>Map placeholder</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong data-render="footer-name">Đá Gắn Răng</strong>
+        <p data-render="disclaimer"></p>
+        <p class="demo-notice" data-render="demo-notice"></p>
+      </div>
+      <div class="footer-links">
+        <a href="#" data-social="facebook">Facebook</a>
+        <a href="#" data-social="tiktok">TikTok</a>
+      </div>
+    </footer>
+
+    <div class="mobile-contact" aria-label="Liên hệ nhanh">
+      <a href="#" data-contact="zalo" data-track="sticky_zalo">Zalo</a>
+      <a href="#" data-contact="phone" data-track="sticky_phone">Gọi</a>
+    </div>
+    <a class="desktop-float" href="#" data-contact="zalo" data-track="floating_zalo">Nhắn Zalo</a>
+
+    <script src="data/products.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

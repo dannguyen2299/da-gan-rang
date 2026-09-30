@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F7F9FC"/>
+  <rect x="690" y="78" width="330" height="475" rx="34" fill="#fff" stroke="#C9D3E3" stroke-width="4"/>
+  <rect x="760" y="140" width="190" height="150" rx="30" fill="#EEF3FA" stroke="#C9D3E3"/>
+  <g fill="#DDE8FF" stroke="#1F4FBF" stroke-width="4">
+    <circle cx="808" cy="178" r="18"/>
+    <circle cx="902" cy="178" r="18"/>
+    <circle cx="855" cy="216" r="18"/>
+    <circle cx="808" cy="252" r="18"/>
+    <circle cx="902" cy="252" r="18"/>
+  </g>
+  <text x="90" y="210" font-family="Georgia,serif" font-size="82" font-weight="700" fill="#141B2D">Đá Gắn Răng</text>
+  <text x="94" y="288" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#1F4FBF">Cubic Zirconia tròn trắng</text>
+  <text x="94" y="350" font-family="Arial,sans-serif" font-size="30" fill="#637086">Thẻ niêm phong 5 viên · 2.25 - 3.00mm</text>
+  <path d="M94 430h355" stroke="#C9A24B" stroke-width="10" stroke-linecap="round"/>
+</svg>
