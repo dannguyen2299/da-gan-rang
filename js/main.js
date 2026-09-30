@@ -80,10 +80,6 @@
     return `<svg viewBox="0 0 180 150" role="img" aria-hidden="true"><rect x="1" y="1" width="178" height="148" rx="16" fill="url(#foil)" stroke="#aab6c9"/>${domes}</svg>`;
   }
 
-  function qr() {
-    return Array.from({ length: 25 }, (_, index) => `<i class="${index % 3 === 0 || index === 6 ? "on" : ""}"></i>`).join("");
-  }
-
   function specCard(spec, variant = "") {
     return `
       <article class="seal-card ${variant}" data-placeholder="css-pack-card" aria-label="Thẻ vỉ niêm phong 5 viên size ${spec.size}mm">
@@ -100,9 +96,8 @@
           <div><span>Comment</span><b>Flat Back / 5 pc</b></div>
         </div>
         <div class="seal-bottom">
-          <span>C5${spec.size.replace(".", "")}8</span>
-          <span>2026-09-29</span>
-          <span class="qr" aria-label="QR placeholder">${qr()}</span>
+          <span>Size ${spec.size} mm</span>
+          <span>5 viên / thẻ</span>
         </div>
       </article>
     `;
@@ -203,8 +198,9 @@
     $('[data-render="shape-icons"]').innerHTML = data.shapes
       .map(
         (shape, index) => `
-          <button type="button" class="shape-icon" role="radio" aria-checked="${index === 0}" data-shape="${shape.id}" aria-label="${text(shape.label)}" title="${text(shape.label)}">
+          <button type="button" class="shape-icon ${shape.available ? "is-available" : "is-unavailable"}" role="radio" aria-checked="${index === 0}" data-shape="${shape.id}" aria-label="${text(shape.label)}${shape.available ? ", đang có" : ", tham khảo"}">
             <img src="${text(shape.photo)}" alt="" loading="lazy" />
+            <span>${text(shape.label)}</span>
           </button>`
       )
       .join("");
@@ -219,7 +215,7 @@
           <article class="product-card">
             ${specCard(spec)}
             <div class="product-info">
-              <p class="material">Cubic Zirconia (kim cương nhân tạo)</p>
+              <p class="material">Cubic Zirconia · đá mô phỏng kim cương</p>
               <h3>Đá gắn răng Cubic Zirconia - thẻ 5 viên - size ${spec.size}mm</h3>
               <p class="price">${spec.price ? `${clean(spec.price)} <small>(giá minh họa)</small>` : "Liên hệ báo giá"}</p>
               <a class="btn btn-secondary" href="${zaloForSize(spec.size)}" data-track="product_zalo_${spec.size}">Hỏi mua size này</a>
@@ -329,11 +325,13 @@
     toggle.addEventListener("click", () => {
       const isOpen = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!isOpen));
+      $(".sr-only", toggle).textContent = isOpen ? "Mở menu" : "Đóng menu";
       document.body.classList.toggle("nav-open", !isOpen);
     });
     nav.addEventListener("click", (event) => {
       if (!event.target.matches("a")) return;
       toggle.setAttribute("aria-expanded", "false");
+      $(".sr-only", toggle).textContent = "Mở menu";
       document.body.classList.remove("nav-open");
     });
   }
@@ -571,12 +569,30 @@
     });
   }
 
+  function bindStickyContact() {
+    const bar = $(".mobile-contact");
+    const hero = $(".hero");
+    if (!bar || !hero) return;
+
+    if (!("IntersectionObserver" in window)) {
+      bar.classList.add("is-visible");
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => bar.classList.toggle("is-visible", !entry.isIntersecting),
+      { threshold: 0.08 }
+    );
+    observer.observe(hero);
+  }
+
   try {
     render();
     bindMenu();
     bindShapes();
     bindSizeTool();
     bindDealerForm();
+    bindStickyContact();
   } catch (error) {
     console.error("Không thể khởi tạo trang demo:", error);
   }

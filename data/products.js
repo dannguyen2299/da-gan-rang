@@ -1,7 +1,7 @@
 window.shopData = {
   shop: {
     name: "Đá Gắn Răng",
-    tagline: "Đá gắn răng Cubic Zirconia - lấp lánh như kim cương",
+    tagline: "Đá gắn răng CZ - lấp lánh tinh tế",
     description:
       "Cắt tròn trắng trong, đế bằng, đóng thẻ niêm phong 5 viên. Nhắn shop để chọn đúng size.",
     phone: "0901234567",
@@ -50,7 +50,7 @@ window.shopData = {
     },
     {
       title: "Thẻ niêm phong có mã",
-      text: "Mỗi thẻ 5 viên có mã thẻ, ngày, bảng thông số và QR placeholder.",
+      text: "Mỗi thẻ 5 viên có mã thẻ, ngày và bảng thông số rõ ràng.",
       icon: "card",
     },
     {
@@ -100,8 +100,6 @@ window.shopData = {
     { label: "Measure (mm)", text: "Đường kính viên đá theo milimet." },
     { label: "Weight (ct) (5 pc)", text: "Tổng trọng lượng 5 viên trên cùng thẻ." },
     { label: "Clarity / Color", text: "Độ trong và màu: trong, không màu." },
-    { label: "Mã thẻ C5xxxx", text: "Mã quản lý nội bộ của thẻ demo." },
-    { label: "QR placeholder", text: "Vị trí QR giả, chưa có mã truy xuất thật." },
   ],
   // Quy trình tham khảo (RESEARCH.md mục 3). TODO: shop xác nhận thời gian, có bán dịch vụ gắn hay không.
   processTime: "Toàn bộ quy trình thường khoảng 10-20 phút (thông tin tham khảo, tùy từng trường hợp).",
